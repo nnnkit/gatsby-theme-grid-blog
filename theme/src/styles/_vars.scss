@@ -1,0 +1,54 @@
+// =========================
+// Variables
+// =========================
+
+$font-family: "Roboto", sans-serif;
+$primary: rgb(127, 127, 248);
+$primaryLight1: #58bbb8;
+$primaryLight2: #01c7c3;
+$secondary: #02173f;
+$secondaryLight: #01112f;
+$secondaryDark: #010d26;
+$text: #7e7e7e;
+$textDark: #565555;
+$accent: #e1461a;
+$extra: #3a3a3a;
+$bg: #d3d3d3;
+
+// =========================
+// Mixins
+// =========================
+
+%flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+%flex-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+%flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

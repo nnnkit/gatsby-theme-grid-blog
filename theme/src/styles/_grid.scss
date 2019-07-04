@@ -1,0 +1,118 @@
+// ==========================
+// Variables
+// ==========================
+$columns: 12;
+$gutter-width: 60px;
+$col-width: 100% / $columns;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $gutter-width / 2;
+}
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 $gutter-width / 2;
+}
+
+@media all and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1570px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1870px;
+  }
+}
+
+// ================================
+// CSS Grid
+// ================================
+.col2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+.grid-col2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  grid-template-areas: "content content content aside aside";
+  align-items: center;
+  // grid-template-rows: repeat(auto-fit, minmax(200px, 300px));
+}
+.content {
+  grid-area: content;
+}
+.aside {
+  grid-area: aside;
+}
+.grid-col4 {
+  display: grid;
+  grid-template-columns: repeat(4, 23.35%);
+  grid-gap: 30px;
+  justify-content: center;
+}
+.grid-col3 {
+  display: grid;
+  grid-template-columns: repeat(3, 23.35%);
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+@media all and (max-width: 768px) {
+  .grid-col2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    grid-template-areas:
+      "content"
+      "aside";
+    align-items: center;
+  }
+  .grid-col4 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 30px;
+    justify-content: center;
+  }
+  .sm-col1 {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-gap: 30px;
+    justify-content: center;
+  }
+}

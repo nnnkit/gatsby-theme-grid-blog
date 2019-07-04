@@ -1,15 +1,7 @@
 {
-  "name": "gatsby-theme-grid-blog",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:nnnkit/gatsby-theme-grid-blog.git",
-  "author": "Ankit <iankit17@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "yarn workspace site start"
-  },
+  "private": true,
   "workspaces": [
-    "demo",
-    "theme"
+    "theme",
+    "demo"
   ]
 }

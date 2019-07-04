@@ -1,0 +1,32 @@
+$background: #f2cee6;
+$stroke: #0d1b1e;
+$shadow: #2dc7ff;
+$px60: 18px;
+$px7: 5px;
+$px3: 2px;
+
+@mixin background-clip($property) {
+  -webkit-background-clip: $property;
+  -moz-background-clip: $property;
+  background-clip: $property;
+}
+
+.logo > section {
+  margin: $px60 / 2 $px60;
+  display: inline-block;
+}
+.logo h1 {
+  font-size: $px60 * 2.5;
+  margin: 0;
+  letter-spacing: $px3 * 2;
+  line-height: 1;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.logo .t-stroke--shadow {
+  @include background-clip(text);
+  color: $background;
+  text-shadow: -3px 0 $stroke, 0 -3px $stroke, 3px 0 $stroke, 0 3px $stroke,
+    3px 3px $stroke, -3px -3px $stroke, -3px 3px $stroke, 3px -3px $stroke,
+    $px7 $px7 $shadow;
+}

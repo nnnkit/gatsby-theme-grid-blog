@@ -1,0 +1,360 @@
+.logo img {
+  width: 12rem;
+}
+
+.padding {
+  padding: 4rem 0;
+}
+.padding-top {
+  padding-top: 0rem;
+}
+.bg-img {
+  position: absolute;
+  z-index: -1;
+  top: 37%;
+}
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.1rem;
+  color: $secondary;
+  margin-bottom: 3rem;
+}
+.secondary-heading {
+  font-size: 2.5rem;
+  font-style: italic;
+  color: $primary;
+  letter-spacing: 0.03em;
+}
+.main-text {
+  font-size: 1.6rem;
+  color: $text;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+// ================================
+// Main Navigation
+// ================================
+.header {
+  padding: 2rem 0;
+}
+.header-secondary nav {
+  // border-bottom: 1px solid #dcdcdc;
+  padding: 0 1rem 0.4rem 1rem;
+}
+.nav__items {
+  margin-left: 2rem;
+}
+.nav__link {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: $secondary;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+  &.active {
+    color: $primary;
+  }
+  &:hover {
+    color: $primary;
+  }
+}
+.toggle {
+  display: none;
+  cursor: pointer;
+}
+.line {
+  width: 24px;
+  height: 3px;
+  background: $secondary;
+  margin: 4px 0;
+  display: block;
+  transition: all 0.3s ease;
+}
+.toggle-cross {
+  .line {
+    background: $primary;
+  }
+  .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+  .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+}
+// ================================
+// Footer
+// ================================
+.footer {
+  background: url(../images/footer-bg.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 4rem;
+  color: #fff;
+  .padding {
+    padding: 1rem 0;
+  }
+}
+.footer__item {
+  padding: 2rem 0;
+  align-self: flex-start;
+  h6 {
+    // font-style: italic;
+    font-size: 1.2rem;
+    line-height: 2.22;
+  }
+  a {
+    font-size: 0.9rem;
+    // font-style: italic;
+    line-height: 2.36;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.09rem;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $primaryLight2;
+    }
+  }
+  i {
+    color: $primaryLight2;
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+}
+.footer__contact {
+  width: 25%;
+  .fa-phone-square {
+    transform: rotate(90deg);
+  }
+}
+.footer__contact-item {
+  margin-top: 1rem;
+}
+.footer__subscription {
+  width: 55%;
+}
+.subscribe-box {
+  position: relative;
+  width: 30rem;
+  margin-top: 1rem;
+  .form-control {
+    background: transparent;
+    border-radius: 0;
+    height: 40px;
+    border: 1px solid #fff;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    padding: 0 7.8rem 0 0.8rem;
+    &::placeholder {
+      font-size: 1rem;
+      color: rgba(#fff, 0.2);
+      // font-style: italic;
+    }
+    &:focus {
+      border: 1px solid rgba($primaryLight2, 1);
+    }
+  }
+  button {
+    position: absolute;
+    height: 38px;
+    right: 1px;
+    border: 0;
+    background: $primaryLight2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $secondaryLight;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+}
+.footer__social {
+  width: 35%;
+  a {
+    margin: 1rem 0;
+    i {
+      margin-right: 2rem;
+      transition: all 200ms ease-in-out;
+    }
+    &:last-child i {
+      margin-right: 0;
+    }
+  }
+  .footer__social-item {
+    margin-top: 0rem;
+  }
+}
+.footer__logo {
+  position: absolute;
+  width: 4rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // background: #fff;
+  // border-radius: 50%;
+}
+.vr-line {
+  height: 10rem;
+  width: 2px;
+  background: #f4f4f4;
+  opacity: 0.1;
+}
+.copyright {
+  padding: 0.8rem 0;
+  background: $secondaryDark;
+  color: rgba(#fff, 0.4);
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+@media all and (max-width: 1200px) {
+  //Footer
+  .footer__contact {
+    width: 25%;
+  }
+  .subscribe-box {
+    width: 20rem;
+  }
+  .footer__social {
+    width: 45%;
+  }
+}
+@media all and (max-width: 992px) {
+  // Footer
+  .footer__contact {
+    width: 33%;
+  }
+  .footer__subscription {
+    width: 50%;
+  }
+  .footer__social {
+    width: 33%;
+    // .footer__social-item {
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    // }
+  }
+}
+
+@media all and (max-width: 768px) {
+  //Header
+  .header {
+    height: 100%;
+  }
+  .toggle {
+    display: block;
+    color: $secondary;
+    position: relative;
+    z-index: 1000;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .logo {
+    position: relative;
+    z-index: 1000;
+    img {
+      width: 100px;
+    }
+  }
+  .nav__menu {
+    position: fixed;
+    left: 0;
+    transform: translateX(-100%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding-top: 18rem;
+    background: rgba($secondary, 0.93);
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    transition: transform 0.8s ease-in-out;
+    opacity: 0;
+  }
+  .nav__menu-active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .nav__link {
+    padding: 1rem 0;
+    color: #fff;
+    opacity: 0;
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  //Footer
+  .footer__wrapper {
+    flex-direction: column;
+  }
+  .footer__item {
+    width: 100%;
+    text-align: center;
+  }
+  .footer__contact {
+    margin-top: 2rem;
+  }
+  .footer__contact,
+  .footer__subscription {
+    width: 100%;
+  }
+  .subscribe-box {
+    max-width: 70%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    .form-control {
+      font-size: 1.3rem;
+      padding: 0 10rem 0 0.8rem;
+      &::placeholder {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .footer__item-container {
+    width: 100%;
+  }
+  .footer__social {
+    width: 100%;
+    .footer__social-item {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .vr-line {
+    display: none;
+  }
+  .copyright {
+    text-align: center;
+  }
+}
+@media all and (max-width: 576px) {
+  // .footer__logo {
+  //   width: 6rem;
+  // }
+  .subscribe-box {
+    max-width: 100%;
+    width: 100%;
+  }
+}
