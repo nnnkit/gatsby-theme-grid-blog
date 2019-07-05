@@ -1,5 +1,6 @@
 const path = require("path");
-module.exports = () => {
+module.exports = ({ contentPath = "content", basePath = "/" }) => {
+  console.log(contentPath, basePath);
   return {
     siteMetadata: {
       name: "Nova Blog",

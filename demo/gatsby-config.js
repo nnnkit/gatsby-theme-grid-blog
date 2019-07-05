@@ -9,5 +9,13 @@ module.exports = {
       email: "iankit@example.com"
     }
   },
-  plugins: ["gatsby-theme-grid-blog"]
+  plugins: [
+    {
+      resolve: "gatsby-theme-grid-blog",
+      options: {
+        contentPath: "/content",
+        basePath: "/"
+      }
+    }
+  ]
 };

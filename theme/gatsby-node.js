@@ -4,7 +4,8 @@ const fs = require("fs");
 const PostTemplate = require.resolve(`./src/templates/Post`);
 const TagTemplate = require.resolve(`./src/templates/Tags`);
 
-exports.onPreBootstrap = ({ reporter }) => {
+exports.onPreBootstrap = ({ reporter }, themeOptions) => {
+  // todo configure it to themeoption
   const contentPath = "content";
   if (!fs.existsSync(contentPath)) {
     reporter.info(`creating the ${contentPath} directory`);
