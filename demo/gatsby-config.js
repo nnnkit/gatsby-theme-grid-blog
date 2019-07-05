@@ -1,17 +1,13 @@
 module.exports = {
-  plugins: [
-    {
-      resolve: "gatsby-theme-grid-blog",
-      options: {
-        name: "Nova Blog",
-        title: "Easiest way to create a blog!",
-        social: {
-          facebook: "altcampus",
-          twitter: "altcampus",
-          github: "altcampus",
-          email: "sample@example.com"
-        }
-      }
+  siteMetadata: {
+    name: "Sample Blog",
+    title: "Learning To Code",
+    social: {
+      facebook: "nnnkit",
+      twitter: "nnnkit",
+      github: "nnnkit",
+      email: "iankit@example.com"
     }
-  ]
+  },
+  plugins: ["gatsby-theme-grid-blog"]
 };

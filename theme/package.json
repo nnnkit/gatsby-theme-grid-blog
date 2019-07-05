@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "clearn": "gatsby clean"
   },
   "dependencies": {
@@ -21,7 +21,6 @@
     "@mdx-js/tag": "0.20.3",
     "gatsby-image": "2.0.41",
     "gatsby-mdx": "0.6.2",
-    "gatsby-plugin-compile-es6-packages": "1.1.0",
     "gatsby-plugin-page-creator": "2.0.12",
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-sass": "2.0.11",

@@ -1,11 +1,15 @@
 const path = require("path");
-module.exports = themeOption => {
-  const { title, name, social } = themeOption;
+module.exports = () => {
   return {
     siteMetadata: {
-      title: title,
-      name: name,
-      social: social
+      name: "Nova Blog",
+      title: "Easiest way to create a blog!",
+      social: {
+        facebook: "altcampus",
+        twitter: "altcampus",
+        github: "altcampus",
+        email: "sample@example.com"
+      }
     },
     plugins: [
       "gatsby-transformer-sharp",
@@ -31,12 +35,6 @@ module.exports = themeOption => {
         options: {
           name: "posts", // name of the folder
           path: path.resolve("./posts") // path of url
-        }
-      },
-      {
-        resolve: "gatsby-plugin-compile-es6-packages",
-        options: {
-          modules: ["gatsby-theme-grid-blog"]
         }
       },
       {

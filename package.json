@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "start": "yarn workspace demo develop"
+  },
   "workspaces": [
     "theme",
     "demo"

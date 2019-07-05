@@ -1,4 +1,16 @@
 const path = require("path");
+const fs = require("fs");
+
+const PostTemplate = require.resolve(`./src/templates/Post`);
+const TagTemplate = require.resolve(`./src/templates/Tags`);
+
+exports.onPreBootstrap = ({ reporter }) => {
+  const contentPath = "content";
+  if (!fs.existsSync(contentPath)) {
+    reporter.info(`creating the ${contentPath} directory`);
+    fs.mkdirSync(contentPath);
+  }
+};
 
 /**
  * When shipping NPM modules, they typically need to be either
@@ -50,7 +62,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   posts.forEach(post => {
     createPage({
       path: post.frontmatter.slug,
-      component: require.resolve("./src/templates/Post.js"),
+      component: require.resolve(PostTemplate),
       context: {
         slug: post.frontmatter.slug
       }
@@ -59,7 +71,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   tags.forEach(tag => {
     createPage({
       path: `/tags/${tag}`,
-      component: require.resolve("./src/templates/Tags.js"),
+      component: require.resolve(TagTemplate),
       context: {
         tag
       }
