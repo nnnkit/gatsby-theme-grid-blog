@@ -6,7 +6,7 @@ const TagTemplate = require.resolve(`./src/templates/Tags`);
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   // todo configure it to themeoption
-  const contentPath = "content";
+  const contentPath = themeOptions.contentPath || "content";
   if (!fs.existsSync(contentPath)) {
     reporter.info(`creating the ${contentPath} directory`);
     fs.mkdirSync(contentPath);
@@ -34,7 +34,7 @@ exports.onCreateWebpackConfig = ({ loaders, actions }) => {
   });
 };
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions;
 
   const result = await graphql(`
@@ -61,11 +61,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     )
   ];
   posts.forEach(post => {
+    const slug = post.frontmatter.slug;
     createPage({
-      path: post.frontmatter.slug,
+      path: slug,
       component: require.resolve(PostTemplate),
       context: {
-        slug: post.frontmatter.slug
+        slug
       }
     });
   });

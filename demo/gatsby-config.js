@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-grid-blog",
       options: {
-        contentPath: "/content",
+        contentPath: "sample",
         basePath: "/"
       }
     }

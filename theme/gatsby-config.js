@@ -1,6 +1,5 @@
 const path = require("path");
 module.exports = ({ contentPath = "content", basePath = "/" }) => {
-  console.log(contentPath, basePath);
   return {
     siteMetadata: {
       name: "Nova Blog",
@@ -35,7 +34,7 @@ module.exports = ({ contentPath = "content", basePath = "/" }) => {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "posts", // name of the folder
-          path: path.resolve("./posts") // path of url
+          path: path.resolve(contentPath) // path of url
         }
       },
       {
