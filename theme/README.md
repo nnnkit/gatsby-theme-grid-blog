@@ -14,33 +14,36 @@
 
 2. `npm init -y`
 
-3. `npm install react react-dom gatsby gatsby-theme-startgatsby`
+3. `npm install react react-dom gatsby gatsby-theme-grid-blog`
 
 4. create a file called `gatsby.config.js` and change the below information with you own details.
 
 ```js
 module.exports = {
-  __experimentalThemes: [
+  siteMetadata: {
+    name: "Sample Blog",
+    title: "Learning To Code",
+    social: {
+      facebook: "nnnkit",
+      twitter: "nnnkit",
+      github: "nnnkit",
+      email: "iankit@example.com"
+    }
+  },
+  plugins: [
     {
-      resolve: "gatsby-theme-startgatsby",
+      resolve: "gatsby-theme-grid-blog",
       options: {
-        name: "Nova Blog",
-        title: "Easiest way to create a blog!",
-        description: "Gatsby blog starter ...",
-        social: {
-          facebook: "altcampus",
-          twitter: "altcampus",
-          github: "altcampus",
-          email: "sample@example.com"
-        }
+        contentPath: "sample",
+        basePath: "/"
       }
     }
   ]
 };
 ```
-5. In your root directory run this command `mkdir -p posts/01`
+5. In your root directory run this command `mkdir -p sample/01`
 
-6. Create a post file `cd posts/01 && touch learn-react.md`
+6. Create a post file `cd sample/01 && touch learn-react.md`
 
 7. Add a smaple post in `learn-react.md` it will look something like this
 
