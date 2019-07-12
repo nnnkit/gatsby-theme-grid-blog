@@ -31,6 +31,14 @@ export default function Footer() {
           >
             <i className="fab fa-github" />
           </a>
+          <a
+            href={`mailto:${email}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-start"
+          >
+            <i className="fas fa-envelope" />
+          </a>
         </div>
       </div>
     </footer>
